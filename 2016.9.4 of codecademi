@@ -1,0 +1,17 @@
+反转字符串
+def reverse(text):
+    n = "" #Create's an empty list.. you got this!
+    index = len(text) #Variable called "index" which is set to the length of the text entered
+    for i in range(0, index): #For every letter from 0 to "index"
+        n = n + text[(index-1)-i] 
+    return n 
+去掉原音
+def anti_vowel(text):
+    vowels = ["A", "a", "E", "e", "I", "i", "O", "o", "U", "u"]
+    anti = ""
+    for i in text:
+        if i in vowels:
+            pass
+        else:
+            anti = anti + i
+    return anti
