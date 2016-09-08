@@ -1,0 +1,20 @@
+#打印菜单
+def printPincnic(itemDict,leftWidth,rightWidth):
+print ("PICNIC ITEMS".center(leftWidth + rightWidth,"-"))
+for k, v in itemDict.items():
+    print (k.ljust(leftWidth,"-")) + str(v).rjust(rightWith))
+
+#验证密码年龄
+while True:
+  print ('enter your age:')
+  age = input()
+  if age.isdecimal():
+    break
+  print ("please input your age")
+
+while Ture:
+  print ("set a password:")
+  password = input()
+  if password.isalnum():
+    break
+  print ("password can only have l and num")
