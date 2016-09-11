@@ -1,0 +1,33 @@
+项目1：复制列表
+#1 python2.7
+
+import pyperclip
+text = pyperclip.paste()
+
+lines = text.split("\n")
+for i in range(len(lines)):
+    lines[i] = "*" + lines[i]
+text = "\n".join(lines)
+pyperclip.copy(text)
+
+项目2：密码保管期精简
+#! python2.7
+#passwordkeeper
+
+Passwords = {"emile":"zweijan@163.com",
+             "blog":"zweijan@163.com",
+             "facebook":"zweijan@163.com"}
+
+import sys,pyperclip#import module
+if len(sys.argv) < 2 :
+    print "usage: pw.py [accout] - copy account passowrd"
+    sys.exit()
+
+
+account = sys.argv[1]
+
+if account in Passwords:
+    pyperclip.copy(Passwords[account])
+    print "Password for " + "account" + "copied to clipboard."
+else:
+    print "There is no account name " + account
