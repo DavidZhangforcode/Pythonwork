@@ -1,0 +1,18 @@
+#美汤
+import requests
+res = requests.get("http://weibo.com/u/2172064763?refer_flag=1001030102_&is_all=1")
+res.raise_for_status()
+playFile = open("romeoandjuliet.txt","wb")
+for chunk inres.iter_content(10000):
+    playFile.write(chounk)
+
+playFile.close()
+
+#获取元素
+import bs4
+soup = bs4.BeautifulSoup(open("example.html"))
+spanElem = soup.select("span")[0]
+str(spanElem)
+spanElem.get("id")
+spanElem.get("some_noneistent_addr") == None
+spanElem.attrs
